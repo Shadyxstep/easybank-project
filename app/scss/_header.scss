@@ -1,5 +1,8 @@
 .header {
 
+    position: relative;
+    z-index: 1;
+
     &.open {
 
 
@@ -23,7 +26,7 @@
 
     .overlay {
         opacity: 0;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
@@ -65,10 +68,10 @@
 
     &__mobilemenu {
 
+        position: absolute;
         background: $white;
         padding: 1.625rem;
         border-radius: 10px;
-        position: fixed;
         width: calc(100% - 3rem);
         left: 50%;
         transform: translateX(-50%);
@@ -117,16 +120,6 @@
                     opacity: 1;
                 }
             }
-        }
-    }
-
-    &__cta {
-        font-size: $font-sm;
-        color: $white;
-        transition: opacity 300ms ease-in-out;
-
-        &:hover {
-            opacity: 0.75;
         }
     }
 }

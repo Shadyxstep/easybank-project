@@ -11,8 +11,8 @@ btnHamburger.addEventListener('click', function(){
 
     if(header.classList.contains('open')){
         // Close Hamburger Menu
-        header.classList.remove('open');
         body.classList.remove('noscroll');
+        header.classList.remove('open');
         fadeElements.forEach(function(element){
             element.classList.remove('fade-in');
             element.classList.add('fade-out');
@@ -20,13 +20,12 @@ btnHamburger.addEventListener('click', function(){
         });
 
     } else {
-        //Open Hamburger Menu
+        // Open Hamburger Menu
         body.classList.add('noscroll');
         header.classList.add('open');
         fadeElements.forEach(function(element){
             element.classList.remove('fade-out');
             element.classList.add('fade-in');
-
         });
     }
 });
